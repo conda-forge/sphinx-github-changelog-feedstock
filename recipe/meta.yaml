@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 204745e93a1f280e4664977b5fee526b0a011c92ca19c304bd01fd641ddb6393
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - poetry-core
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - docutils
     - importlib-metadata
     - requests
@@ -32,6 +32,7 @@ test:
     - sphinx_github_changelog
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
