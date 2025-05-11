@@ -1,5 +1,5 @@
 {% set name = "sphinx-github-changelog" %}
-{% set version = "1.6.1" %}
+{% set version = "1.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 6437fd910ff863e8809bfe709979bfbf87244d9e8d774aa95040250cb7030428
+  sha256: 2ec5a716fbd21edcb4f549f8e4503a7ab08a285585aaf291a7e97d79cd6467ab
 
 build:
   noarch: python
