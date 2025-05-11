@@ -1,5 +1,5 @@
 {% set name = "sphinx-github-changelog" %}
-{% set version = "1.5.0" %}
+{% set version = "1.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 0f2a8cb83f579363232700bf6198c5610ff5c93ea0be6855ec17f3c70f626024
+  sha256: 6437fd910ff863e8809bfe709979bfbf87244d9e8d774aa95040250cb7030428
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - poetry-core
+    - hatchling
   run:
     - python >={{ python_min }}
     - docutils
