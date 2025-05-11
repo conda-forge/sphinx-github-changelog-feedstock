@@ -40,7 +40,7 @@ about:
   home: https://github.com/ewjoachim/sphinx-github-changelog/
   license: MIT
   license_family: MIT
-  license_file: LICENSE.rst
+  license_file: LICENSE
   summary: Build a sphinx changelog from GitHub Releases
   description: |
     sphinx-github-changelog is a sphinx plugin that provides a directive which,
