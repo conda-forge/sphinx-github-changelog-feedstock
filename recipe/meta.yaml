@@ -20,11 +20,12 @@ requirements:
     - python {{ python_min }}
     - pip
     - hatchling
+    - uv-dynamic-versioning
   run:
     - python >={{ python_min }}
     - docutils
-    - importlib-metadata
-    - requests
+    - httpx
+    - myst-parser >=5.1.0
     - sphinx
 
 test:
