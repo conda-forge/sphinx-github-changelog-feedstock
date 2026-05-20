@@ -1,5 +1,5 @@
 {% set name = "sphinx-github-changelog" %}
-{% set version = "1.7.2" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 79f11f30ec5b1ae52a1742a6dc702644203b164732a1af4b049ebe522ff484e4
+  sha256: 3ff7f3352bb3637f309571e45364a81e71b7840a4f23dc6dc171d72b5e0625d1
 
 build:
   noarch: python
@@ -20,11 +20,12 @@ requirements:
     - python {{ python_min }}
     - pip
     - hatchling
+    - uv-dynamic-versioning
   run:
     - python >={{ python_min }}
     - docutils
-    - importlib-metadata
-    - requests
+    - httpx
+    - myst-parser >=5.1.0
     - sphinx
 
 test:
