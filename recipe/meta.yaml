@@ -28,6 +28,7 @@ requirements:
     - httpx
     - myst-parser >=5.1.0
     - sphinx
+    - tenacity
 
 test:
   imports:
