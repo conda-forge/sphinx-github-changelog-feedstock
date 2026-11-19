@@ -1,5 +1,5 @@
 {% set name = "sphinx-github-changelog" %}
-{% set version = "2.3.0" %}
+{% set version = "2.3.1" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 704a6dfca5426b70b0bbcfb426937cb900935a69c0343690af8602bd50d100f8
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 525b228370bc9aae702359db7a4954c74792009098ee26d4349a57e614df5436
 
 build:
   noarch: python
